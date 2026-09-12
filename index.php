@@ -14,7 +14,7 @@
         <img src="https://casa.abril.com.br/wp-content/uploads/2021/03/tipos-de-flores-para-decorar-seu-ambiente-casa.com-15-ninfeia.jpg?quality=70&strip=info&w=1024" alt="Flor">
     </div>
 
-    <form>
+    <form method="POST">
         <h1>Cadastro</h1>
         <label for="nome">Nome:</label><br>
         <input type="text" name="nome" id="nome" placeholder="Nome" required><br>
@@ -24,6 +24,18 @@
         <input type="tel" name="telefone" id="telefone" placeholder="xx xxxxx-xxxx" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" required><br>
         <button type="submit">Cadastrar</button>
     </form>
+
+    <?php 
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+            $nome = $_POST["nome"];
+            $email = $_POST["email"];
+            $telefone = $_POST["telefone"];
+
+            echo "Nome: $nome<br>
+                E-mail: $email<br>
+                Telefone: $telefone";
+        }
+    ?>
 
 </body>
 </html>
