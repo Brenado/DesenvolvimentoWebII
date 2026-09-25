@@ -1,14 +1,14 @@
 FROM php:8.2-cli
 
-WORKDIR/app
+WORKDIR /app
 
-RUN apt-get update && apt-get install -y\
-  libpq-dev\
-  && docker-php-ext-install pgsql pdo_pgsql\
-  && apt-get clean\
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    && docker-php-ext-install pgsql pdo_pgsql \
+    && apt-get clean
 
-COPY ./app
+COPY ./app /app
 
 EXPOSE 10000
 
-CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-10000}-t/app"]
+CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-10000} -t /app"]
