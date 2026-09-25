@@ -39,6 +39,8 @@
                 "INSERT INTO usuario(nome, email, telefone) VALUES ($1, $2, $3)",
                 array($nome, $email, $telefone)
             );
+
+            echo "Cadastro realizado";
         }
     ?>
 
