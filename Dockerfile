@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install pgsql pdo_pgsql \
     && apt-get clean
 
-COPY ./app /app
+COPY ./app
 
 EXPOSE 10000
 
