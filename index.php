@@ -31,9 +31,9 @@
             $email = $_POST["email"];
             $telefone = $_POST["telefone"];
 
-            echo "Nome: $nome<br>" +
-                "Email: $email<br>" +
-                "Telefone: $telefone";
+            echo "Nome: $nome<br>";
+            echo "Email: $email<br>";
+            echo "Telefone: $telefone";
             
             $database_url = getenv("DATABASE_URL");
             
