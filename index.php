@@ -33,7 +33,7 @@
 
             echo "Nome: $nome<br>";
             echo "Email: $email<br>";
-            echo "Telefone: $telefone";
+            echo "Telefone: $telefone<br>";
             
             $database_url = getenv("DATABASE_URL");
             
@@ -45,7 +45,7 @@
                 array($nome, $email, $telefone)
             );
 
-            echo "Cadastro realizado";
+            echo "<p style='color:red'>Cadastro realizado</p>";
         }
     ?>
 
