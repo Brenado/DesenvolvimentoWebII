@@ -45,7 +45,7 @@
                 array($nome, $email, $telefone)
             );
 
-            echo "<p style='color:red'>Cadastro realizado</p>";
+            echo "<p style='color:green'>Cadastro realizado</p>";
         }
     ?>
 
