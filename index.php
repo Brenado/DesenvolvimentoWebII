@@ -32,16 +32,12 @@
             $telefone = $_POST["telefone"];
 
             $database_url = getenv("DATABASE_URL");
-
-            echo "<pre>";
-            var_dump($database_url);
-            echo "</pre>";
             
             $conexao = pg_connect($database_url);
 
             pg_query_params(
                 $conexao,
-                "INSERT INTO usuario(nome, email, telefone) VALUES ($1, $2, $3)",
+                "INSERT INTO usuarios(nome, email, telefone) VALUES ($1, $2, $3)",
                 array($nome, $email, $telefone)
             );
 
