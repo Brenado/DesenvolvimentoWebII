@@ -31,6 +31,10 @@
             $email = $_POST["email"];
             $telefone = $_POST["telefone"];
 
+            echo "Nome: $nome<br>" +
+                "Email: $email<br>" +
+                "Telefone: $telefone";
+            
             $database_url = getenv("DATABASE_URL");
             
             $conexao = pg_connect($database_url);
