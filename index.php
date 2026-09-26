@@ -32,6 +32,11 @@
             $telefone = $_POST["telefone"];
 
             $database_url = getenv("DATABASE_URL");
+
+            echo "<pre>";
+            var_dump($database_url);
+            echo "</pre>";
+            
             $conexao = pg_connect($database_url);
 
             pg_query_params(
